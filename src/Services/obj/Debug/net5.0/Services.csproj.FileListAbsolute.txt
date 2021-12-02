@@ -1,0 +1,17 @@
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\Services.deps.json
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\Services.dll
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\ref\Services.dll
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\Services.pdb
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.csproj.AssemblyReference.cache
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.AssemblyInfoInputs.cache
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.AssemblyInfo.cs
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.csproj.CoreCompileInputs.cache
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.dll
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\ref\Services.dll
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.pdb
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\Entities.dll
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\Repositories.dll
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\Repositories.pdb
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\bin\Debug\net5.0\Entities.pdb
+D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Services\obj\Debug\net5.0\Services.csproj.CopyComplete
