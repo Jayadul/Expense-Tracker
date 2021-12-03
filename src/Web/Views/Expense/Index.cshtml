@@ -1,6 +1,6 @@
 ﻿@model Services.ExpenseManager.VmExpense
 @{
-    ViewBag.Name = "Expense";
+    ViewData["Title"] = "Expense";
     var today = DateTime.Now.ToString("dd/MM/yyyy");
 
 }
@@ -57,16 +57,16 @@
                                   Category of the Expense
                             </small>
                             </label>
-                            @Html.DropDownList("ExpenseCategoryId", new SelectList(ViewBag.ExppenseCategoryList, "Id", "Name"), "Select", new { @class = "form-control form-padding", id = "ExpenseCategoryId" })
+                            @Html.DropDownList("ExpenseCategoryId", new SelectList(ViewBag.ExppenseCategoryList, "Id", "Name"), "Select", new { @class = "form-control form-padding", id = "ExpenseCategoryId", value="0" })
                             <span id="spnExpenseCategoryId" class="text-danger"></span>
                         </div>
                         <div class="col-sm-12">
                             <label class="mt-3">
                                 Amount <sup class="text-danger">*</sup><br /><small>
-    Expense Amount
+    Expense Amount in BDT
 </small>
                             </label>
-                            <input type="text" name="Ammount" id="Ammount" class="form-control" />
+                            <input type="number" name="Ammount" id="Ammount" class="form-control" />
                             <span class="text-danger" id="spnAmmount"></span>
                         </div>
                     </div>
@@ -99,6 +99,51 @@
 
 <section class="content">
     <div class="container-fluid">
+        <div class="card collapsed-card">
+            <div class="card-header border-transparent">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <h3 class="card-title"><i class="fas fa-search"></i> &nbsp;Search</h3>
+                </button>
+
+                @*<h3 class="card-title"><i class="fas fa-search"></i> &nbsp;Search</h3>*@
+                <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                        <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body p-0 scrollable-height-150">
+                <div class="container">
+                    <div class="row mt-2">
+                        <div class="col-sm-4">
+                            <!-- Date and time range -->
+                            <div class="form-group">
+                                <label>Date</label>
+                                <input type="text" class="d-none" id="FromDate" />
+                                <input type="text" class="d-none" id="ToDate" />
+                                <div class="input-group">
+                                    <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+                                        <span id="dummyDateRangeValue">
+                                            <i class="fa fa-calendar"></i> Search by date
+                                        </span>
+                                        <i class="fa fa-caret-down"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer clearfix">
+
+                <a href="javascript:void(0)" id="search" class="btn btn-sm btn-info float-right">Search</a>
+            </div>
+        </div>
+
         <div class="card">
             <div class="card-header">
                 <h3 class="card-Name">Existing Expense</h3>
@@ -148,9 +193,13 @@
                 "lengthMenu": [[25, 50, 100], [25, 50, 100]],
                 "pageLength": 50,
                 "processing": true,
-                "serverSide": true,
+                "serverSide": false,
                 "ajax": {
-                    url: "/Expense/AjaxDataList"
+                    url: "/Expense/AjaxDataList",
+                    "data": function (d) {
+                        d.FromDate = $("#FromDate").val()
+                        d.ToDate = $("#ToDate").val()
+                    },
                 },
                 "columns": [
                     { "data": "date" },
@@ -167,32 +216,51 @@
             });
         });
 
-        //Empty Validation
-        //function ValidateFormData() {
-        //    $('#save').prop('disabled', true);
-        //    isValid = true;
+        //Validation
+        function ValidateFormData() {
+            $('#save').prop('disabled', true);
+            isValid = true;
 
-        //    //values
-        //    var Name = $('#Name').val();
+            //values
+            debugger
+            var ExpenseCategoryId = parseInt($('#ExpenseCategoryId').val());
+            var Date = $('#Date').val().split('/');
+            var FormattedDate = Date[2] + '-' + Date[0] + '-' + Date[1];
 
-        //    //validation msg
-        //    $('#spnName').hide();
+            var Ammount = parseInt($('#Ammount').val());
+            var Today = ('@today').split('/');
+            var FormattedToday = Today[2] + '-' + Today[0] + '-' + Today[1];
+            debugger
+            //validation msg
+            $('#spnExpenseCategoryId').hide();
+            $('#spnDate').hide();
+            $('#spnAmmount').hide();
 
+            if (FormattedDate > FormattedToday) {
+                $('#spnDate').text("Not Allowed to record future expense");
+                $('#spnDate').show();
+                isValid = false;
+            }
 
+            if (Ammount < 1 || Ammount == NaN) {
+                $('#spnName').text("Please try with a valid amount");
+                $('#spnName').show();
+                isValid = false;
+            }
 
-        //    if (Name == null || Name == "" || typeof Name == "undefined") {
-        //        $('#spnName').text("Name is required");
-        //        $('#spnName').show();
-        //        isValid = false;
-        //    }
-        //    if (isValid == false) {
-        //        $('#save').prop('disabled', false);
-        //    }
-        //    return isValid;
-        //}
+            if (ExpenseCategoryId < 1 || ExpenseCategoryId == "") {
+                $('#spnName').text("Please try with a valid amount");
+                $('#spnName').show();
+                isValid = false;
+            }
+            if (isValid == false) {
+                $('#save').prop('disabled', false);
+            }
+            return isValid;
+        }
 
-        $("#Name").keypress(function () {
-            $("#spnName").hide();
+        $("#Ammount").keypress(function () {
+            $("#spnAmmount").hide();
         });
 
         //reset modal
@@ -211,7 +279,9 @@
                 datatype: "json",
                 success: function (response) {
                     $('#Id').val(response.id);
-                    $('#Name').val(response.name);
+                    $('#ExpenseCategoryId').val(response.expenseCategoryId);
+                    $('#Date').val(response.date);
+                    $('#Ammount').val(response.ammount);
                     $('#AddorEditModalHeader').text('Edit Expense');
                     $('#ExpenseModal').modal('show');
                 }
@@ -238,7 +308,7 @@
                     Swal.fire({
                         Name: 'Deleting! Want to Cancel Deleting?',
                         html: 'It will take <b></b> milliseconds to delete.',
-                        timer: 3000,
+                        timer: 1000,
                         timerProgressBar: true,
                         showCancelButton: true,
                         cancelButtonColor: '#d33',
@@ -260,7 +330,6 @@
                     }).then((result) => {
                         if (result.dismiss === Swal.DismissReason.timer) {
                             //delete
-                            debugger
                             $.get("/Expense/Delete/" + id, function (data) {
                                 RowId = 0;
                                 if (!data || typeof data === 'undefined') {
@@ -286,14 +355,80 @@
                                 }, 2300)
                                 $('#DeleteConfirmation').modal('hide');
                             });
-                            //delete
                         }
                     })
-                    //undo delete
                 }
             });
-
         }
-        //delete confirmation
+
+        //filter
+        $("#search").click(function () {
+            var pickdate = $("#dummyDateRangeValue").text();
+            var data = $("#dummyDateRangeValue").find("i");
+
+            if (data.length == 0) {
+                var dateArr = pickdate.split('-');
+
+                var fromDateSplit = dateArr[0].trim().split(',');
+                var formMonth = fromDateSplit[0].split(' ')[0].trim();
+                var fromDate = fromDateSplit[0].split(' ')[1].trim();
+                var fromYear = fromDateSplit[1].trim();
+
+
+                var toDateSplit = dateArr[1].trim().split(',');
+                var toMonth = toDateSplit[0].split(' ')[0].trim();
+                var toDate = toDateSplit[0].split(' ')[1].trim();
+                var toYear = toDateSplit[1].trim();
+
+                $("#FromDate").val(fromDate + "/" + MonthNumber(formMonth) + "/" + fromYear);
+                $("#ToDate").val(toDate + "/" + MonthNumber(toMonth) + "/" + toYear);
+            }
+            oTable.ajax.reload();
+        });
+
+        function MonthNumber(name) {
+            switch (name) {
+                case "January":
+                    return 1;
+                    break;
+                case "February":
+                    return 2;
+                    break;
+                case "March":
+                    return 3;
+                    break;
+                case "April":
+                    return 4;
+                    break;
+                case "May":
+                    return 5;
+                    break;
+                case "June":
+                    return 6;
+                    break;
+                case "July":
+                    return 7;
+                    break;
+                case "August":
+                    return 8;
+                    break;
+                case "September":
+                    return 9;
+                    break;
+                case "October":
+                    return 10;
+                    break;
+                case "November":
+                    return 11;
+                    break;
+                case "December":
+                    return 12;
+                    break;
+                default:
+                // code to be executed if n is different from case 1 and 2
+            }
+        }
+
+
     </script>
 }

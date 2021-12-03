@@ -81,13 +81,14 @@ namespace Web.Controllers
         }
         public ActionResult Delete(int id)
         {
-            if (!_expenseCategoryService.HasChild(id))
-            {
-                if (_expenseCategoryService.Delete(id))
-                    return Json("success");
-                else
-                    return NotFound();
-            }
+            //if (!_expenseCategoryService.HasChild(id))
+            //{
+
+            //}
+            //else
+            //    return NotFound();
+            if (_expenseCategoryService.Delete(id))
+                return Json("success");
             else
                 return NotFound();
         }

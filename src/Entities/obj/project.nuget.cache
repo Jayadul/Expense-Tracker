@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "us7SAFAblips1opjmN5tZNNIrbz18Tgff5TKgIeF37AtarhYc8eX0yk94YNnXlugy3rIV9F3gQXxvlMtQ5utyA==",
+  "dgSpecHash": "uAJiJObms6FY++rxUFvuXljwwzUGbibGRpp8HTAd3qWR4UlYFCslHYhGbNT6Kwinqv0bZ52UY9zL/kAsnQ+hCQ==",
   "success": true,
-  "projectFilePath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Entities\\Entities.csproj",
+  "projectFilePath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

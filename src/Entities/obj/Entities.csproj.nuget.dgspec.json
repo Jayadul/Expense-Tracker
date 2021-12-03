@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Entities\\Entities.csproj": {}
+    "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Entities\\Entities.csproj": {
+    "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Entities\\Entities.csproj",
+        "projectUniqueName": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Entities\\Entities.csproj",
+        "projectPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\jayad\\.nuget\\packages\\",
-        "outputPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Entities\\obj\\",
+        "outputPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jayad\\AppData\\Roaming\\NuGet\\NuGet.Config",

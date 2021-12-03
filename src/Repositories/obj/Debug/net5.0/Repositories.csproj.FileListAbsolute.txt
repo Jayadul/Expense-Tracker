@@ -13,3 +13,18 @@ D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Repositories\obj
 D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Repositories\bin\Debug\net5.0\Entities.dll
 D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Repositories\bin\Debug\net5.0\Entities.pdb
 D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Repositories\obj\Debug\net5.0\Repositories.csproj.CopyComplete
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\bin\Debug\net5.0\Repositories.deps.json
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\bin\Debug\net5.0\Repositories.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\bin\Debug\net5.0\ref\Repositories.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\bin\Debug\net5.0\Repositories.pdb
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\bin\Debug\net5.0\Entities.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\bin\Debug\net5.0\Entities.pdb
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.csproj.AssemblyReference.cache
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.AssemblyInfoInputs.cache
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.AssemblyInfo.cs
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.csproj.CoreCompileInputs.cache
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.csproj.CopyComplete
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\ref\Repositories.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Repositories\obj\Debug\net5.0\Repositories.pdb

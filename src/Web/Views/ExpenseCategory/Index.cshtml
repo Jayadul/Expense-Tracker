@@ -1,6 +1,6 @@
 ﻿@model Services.ExpenseCategoryManager.VmExpenseCategory
 @{
-    ViewBag.Name = "Expense Category";
+    ViewData["Title"] = "Expense Category";
 }
 @if (TempData["AddSuccessMessage"] != null)
 {
@@ -114,7 +114,7 @@
                 "lengthMenu": [[25, 50, 100], [25, 50, 100]],
                 "pageLength": 50,
                 "processing": true,
-                "serverSide": true,
+                "serverSide": false,
                 "ajax": {
                     url: "/ExpenseCategory/AjaxDataList"
                 },
@@ -202,7 +202,7 @@
                     Swal.fire({
                         Name: 'Deleting! Want to Cancel Deleting?',
                         html: 'It will take <b></b> milliseconds to delete.',
-                        timer: 3000,
+                        timer: 1000,
                         timerProgressBar: true,
                         showCancelButton: true,
                         cancelButtonColor: '#d33',
@@ -226,6 +226,7 @@
                             //delete
                             debugger
                             $.get("/ExpenseCategory/Delete/" + id, function (data) {
+                                debugger
                                 RowId = 0;
                                 if (!data || typeof data === 'undefined') {
                                     Swal.fire({

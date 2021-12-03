@@ -5741,11 +5741,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Services\\Services.csproj",
+      "projectUniqueName": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Services\\Services.csproj",
+      "projectPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\jayad\\.nuget\\packages\\",
-      "outputPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Services\\obj\\",
+      "outputPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jayad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5762,8 +5762,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Repositories\\Repositories.csproj"
+            "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Repositories\\Repositories.csproj": {
+              "projectPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Repositories\\Repositories.csproj"
             }
           }
         }

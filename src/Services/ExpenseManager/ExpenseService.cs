@@ -60,10 +60,22 @@ namespace Services.ExpenseManager
                 return 0;
             }
         }
-        public Task<List<VmExpense>> GetBetween(int start, int displayLength, string searchValue, out int totalLength)
+        public Task<List<VmExpense>> GetBetween(string FromDate, string ToDate,int start, int displayLength, string searchValue, out int totalLength)
         {
             var context = _unitOfWork.ExpenseRepo.GetAllQueryable();
             var categoryContext = _unitOfWork.ExpenseCategoryRepo.GetAllQueryable();
+
+            if (!string.IsNullOrEmpty(FromDate))
+            {
+                DateTime fromDate = Convert.ToDateTime(FromDate).Date;
+                context = context.Where(w => w.Date >= fromDate).AsQueryable();
+            }
+
+            if (!string.IsNullOrEmpty(ToDate))
+            {
+                DateTime toDate = Convert.ToDateTime(ToDate).Date;
+                context = context.Where(w => w.Date <= toDate).AsQueryable();
+            }
 
             totalLength = context.Count();
             displayLength = totalLength;

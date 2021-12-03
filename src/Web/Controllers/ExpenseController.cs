@@ -48,11 +48,11 @@ namespace Web.Controllers
                 throw;
             }
         }
-        public async Task<IActionResult> AjaxDataListAsync(JQueryDataTableParamModel param)
+        public async Task<IActionResult> AjaxDataListAsync(JQueryDataTableParamModel param, string FromDate, string ToDate)
         {
             string search = HttpContext.Request.Query["search[value]"].ToString();
             int totalLength = 0;
-            var result = await _expenseService.GetBetween(param.start, param.length, search, out totalLength);
+            var result = await _expenseService.GetBetween(FromDate, ToDate,param.start, param.length, search, out totalLength);
             return Json(new
             {
                 iTotalRecords = result.Count(),
@@ -69,7 +69,7 @@ namespace Web.Controllers
             //keep data from db to vm and returning as json to show in fields while editing
             temp.Id = data.Id;
             temp.Ammount = data.Ammount;
-            temp.Date = data.Date.ToString("dd mm yyyy");
+            temp.Date = data.Date.ToString("dd/MM/yyyy");
             temp.ExpenseCategoryId = data.ExpenseCategoryId;
             return Json(temp);
         }

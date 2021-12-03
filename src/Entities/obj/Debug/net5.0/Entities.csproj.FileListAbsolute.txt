@@ -10,3 +10,15 @@ D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Entities\obj\Deb
 D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Entities\obj\Debug\net5.0\ref\Entities.dll
 D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Entities\obj\Debug\net5.0\Entities.pdb
 D:\File.Repository\Locker\Personal\Projects\Expense Tracker\src\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0\Entities.deps.json
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0\Entities.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0\ref\Entities.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0\Entities.pdb
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.csproj.CoreCompileInputs.cache
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\ref\Entities.dll
+D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.pdb

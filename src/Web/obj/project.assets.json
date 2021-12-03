@@ -6201,11 +6201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Web\\Web.csproj",
+      "projectUniqueName": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Web\\Web.csproj",
+      "projectPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Web\\Web.csproj",
       "packagesPath": "C:\\Users\\jayad\\.nuget\\packages\\",
-      "outputPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Web\\obj\\",
+      "outputPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jayad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6222,11 +6222,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Repositories\\Repositories.csproj": {
-              "projectPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Repositories\\Repositories.csproj"
+            "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Repositories\\Repositories.csproj": {
+              "projectPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Repositories\\Repositories.csproj"
             },
-            "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Services\\Services.csproj": {
-              "projectPath": "D:\\File.Repository\\Locker\\Personal\\Projects\\Expense Tracker\\src\\Services\\Services.csproj"
+            "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Services\\Services.csproj": {
+              "projectPath": "D:\\File.Repository\\Locker\\Personal\\Expense-Tracker\\src\\Services\\Services.csproj"
             }
           }
         }
