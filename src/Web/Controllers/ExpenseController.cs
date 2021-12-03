@@ -18,6 +18,7 @@ namespace Web.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.ExppenseCategoryList = _expenseService.GetAllCategories();
             return View();
         }
         [HttpPost]

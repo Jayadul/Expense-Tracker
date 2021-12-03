@@ -1,6 +1,8 @@
 ﻿@model Services.ExpenseManager.VmExpense
 @{
     ViewBag.Name = "Expense";
+    var today = DateTime.Now.ToString("dd/MM/yyyy");
+
 }
 @if (TempData["AddSuccessMessage"] != null)
 {
@@ -39,14 +41,33 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <label class="mt-3">
-                                Name <sup class="text-danger">*</sup><br /><small>
-                                    Name of the Expense
+                                Date <sup class="text-danger">*</sup><br /><small>
+                                    Date of the Expense
                                 </small>
                             </label>
-                            <input type="text" name="Name" id="Name" class="form-control" />
-                            <span class="text-danger" id="spnName"></span>
+                            <label>Date</label><br>
+                            <input type="text" name="Date" id="Date" class="form-control form-padding" placeholder="DD/MM/YYYY" value="@today" />
+                            <span id="spnDate" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="mt-3">
+                                Expense Category <sup class="text-danger">*</sup><br /><small>
+                                  Category of the Expense
+                            </small>
+                            </label>
+                            @Html.DropDownList("ExpenseCategoryId", new SelectList(ViewBag.ExppenseCategoryList, "Id", "Name"), "Select", new { @class = "form-control form-padding", id = "ExpenseCategoryId" })
+                            <span id="spnExpenseCategoryId" class="text-danger"></span>
+                        </div>
+                        <div class="col-sm-12">
+                            <label class="mt-3">
+                                Amount <sup class="text-danger">*</sup><br /><small>
+    Expense Amount
+</small>
+                            </label>
+                            <input type="text" name="Ammount" id="Ammount" class="form-control" />
+                            <span class="text-danger" id="spnAmmount"></span>
                         </div>
                     </div>
                 </div>
@@ -111,6 +132,17 @@
             });
             $('#AddorEditModalHeader').text('Add New Expense');
 
+            //date
+            $(function () {
+                $('#Date').datepicker({
+                    autoclose: true,
+                    format: 'dd/mm/yyyy'
+                }).on('changeDate', function (e) {
+                    selectedDate = new Date(e.date.valueOf());
+                    $('#Date').val(selectedDate);
+                });
+            });
+
             //datatable
             oTable = $('#dataTable').DataTable({
                 "lengthMenu": [[25, 50, 100], [25, 50, 100]],
@@ -123,7 +155,7 @@
                 "columns": [
                     { "data": "date" },
                     { "data": "expenseCategoryName" },
-                    { "data": "Ammount" },
+                    { "data": "ammount" },
                     {
                         "Name": "Action",
                         "render": function (data, type, row, meta) {
@@ -136,28 +168,28 @@
         });
 
         //Empty Validation
-        function ValidateFormData() {
-            $('#save').prop('disabled', true);
-            isValid = true;
+        //function ValidateFormData() {
+        //    $('#save').prop('disabled', true);
+        //    isValid = true;
 
-            //values
-            var Name = $('#Name').val();
+        //    //values
+        //    var Name = $('#Name').val();
 
-            //validation msg
-            $('#spnName').hide();
+        //    //validation msg
+        //    $('#spnName').hide();
 
 
 
-            if (Name == null || Name == "" || typeof Name == "undefined") {
-                $('#spnName').text("Name is required");
-                $('#spnName').show();
-                isValid = false;
-            }
-            if (isValid == false) {
-                $('#save').prop('disabled', false);
-            }
-            return isValid;
-        }
+        //    if (Name == null || Name == "" || typeof Name == "undefined") {
+        //        $('#spnName').text("Name is required");
+        //        $('#spnName').show();
+        //        isValid = false;
+        //    }
+        //    if (isValid == false) {
+        //        $('#save').prop('disabled', false);
+        //    }
+        //    return isValid;
+        //}
 
         $("#Name").keypress(function () {
             $("#spnName").hide();

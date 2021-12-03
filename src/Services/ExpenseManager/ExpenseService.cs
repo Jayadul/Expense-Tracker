@@ -1,5 +1,6 @@
 ﻿using Entities.Domains;
 using Repositories.UnitOfWorks;
+using Services.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -80,6 +81,13 @@ namespace Services.ExpenseManager
             }).ToList();
             return Task.FromResult(result);
         }
+
+        public IEnumerable<VmExpenseCategorySelectList> GetAllCategories()
+        {
+            var ExpenseCategoryList = _unitOfWork.ExpenseCategoryRepo.GetAll().Select(s => new VmExpenseCategorySelectList { Id = s.Id, Name = s.Name });
+            return ExpenseCategoryList;
+        }
+
         public Expense GetById(int id)
         {
             return _unitOfWork.ExpenseRepo.Get(id);
@@ -94,6 +102,7 @@ namespace Services.ExpenseManager
             if (obj != null)
             {
                 _unitOfWork.ExpenseRepo.Remove(obj);
+                _unitOfWork.SaveChanges();
                 return true;
             }
             else
