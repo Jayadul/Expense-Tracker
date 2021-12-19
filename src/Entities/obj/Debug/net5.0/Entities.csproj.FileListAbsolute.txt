@@ -14,7 +14,6 @@ D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0
 D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0\Entities.dll
 D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0\ref\Entities.dll
 D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\bin\Debug\net5.0\Entities.pdb
-D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.csproj.AssemblyReference.cache
 D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
 D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
 D:\File.Repository\Locker\Personal\Expense-Tracker\src\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs

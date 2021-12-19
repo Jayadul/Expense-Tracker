@@ -1,5 +1,8 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Repositories.Common;
+using Repositories.Helper;
 using Repositories.UnitOfWorks;
 using Services.ExpenseCategoryManager;
 using Services.ExpenseManager;
@@ -15,8 +18,11 @@ namespace Web.Infrastructure
         public static void DependencyRegisterLayer(this IServiceCollection services, IConfiguration Configuration)
         {
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             services.AddTransient<IExpenseCategoryService, ExpenseCategoryService>();
             services.AddTransient<IExpenseService, ExpenseService>();          
+            services.AddTransient<IAuthenticatedUser, AuthenticatedUser>();          
+            services.AddTransient<IDateTimeService, DateTimeService>();          
         }
     }
 }
